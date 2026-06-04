@@ -55,7 +55,7 @@
  #define TFT_WIDTH  128 // Marauder Mini
 // #define TFT_WIDTH  240 // ST7789 240 x 240 and 240 x 320
 // #define TFT_HEIGHT 160
- #define TFT_HEIGHT 128 // Marauder Mini
+ #define TFT_HEIGHT 160 // Marauder Mini
 // #define TFT_HEIGHT 240 // ST7789 240 x 240
 // #define TFT_HEIGHT 320 // ST7789 240 x 320
 
@@ -69,11 +69,11 @@
 // #define ST7735_INITB
 // #define ST7735_GREENTAB
 // #define ST7735_GREENTAB2
- #define ST7735_GREENTAB3
+// #define ST7735_GREENTAB3
 // #define ST7735_GREENTAB128    // For 128 x 128 display
 // #define ST7735_GREENTAB160x80 // For 160 x 80 display (BGR, inverted, 26 offset)
 // #define ST7735_REDTAB
-// #define ST7735_BLACKTAB
+#define ST7735_BLACKTAB
 // #define ST7735_REDTAB160x80   // For 160 x 80 display with 24 pixel offset
 
 // If colours are inverted (white shows as black) then uncomment one of the next
@@ -167,12 +167,12 @@
 // Marauder Mini
 #define TFT_CS   17  // Chip select control pin D8
 #define TFT_DC   16  // Data Command control pin
-#define TFT_RST  5  // Reset pin (could connect to NodeMCU RST, see next line)
+#define TFT_RST   5  // Reset pin (could connect to NodeMCU RST, see next line)
 #define TOUCH_CS -1
 #define TFT_MISO 19
 #define TFT_MOSI 23
 #define TFT_SCLK 18
-//#define TFT_BL   32
+#define TFT_BL   32
 
 /*
 // ESP32 Marauder 
