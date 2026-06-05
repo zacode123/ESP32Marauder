@@ -167,7 +167,7 @@
     // #define HAS_NEOPIXEL_LED
     // #define HAS_PWR_MGMT
     #define HAS_SCREEN
-    #define HAS_FULL_SCREEN
+    #define HAS_MINI_SCREEN
     // #define HAS_SD
     // #define USE_SD
     // #define HAS_TEMP_SENSOR
@@ -175,7 +175,7 @@
     #define HAS_NIMBLE_2
     #define HAS_IDF_3
     // #define HAS_C5_SD
-    // #define HAS_SIMPLEX_DISPLAY
+    #define HAS_SIMPLEX_DISPLAY
   #endif
 
   #ifdef MARAUDER_V7
