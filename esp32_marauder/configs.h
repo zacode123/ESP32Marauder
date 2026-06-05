@@ -590,8 +590,8 @@
     #ifdef MARAUDER_MINI
       #define L_BTN -1
       #define R_BTN -1
-      #define U_BTN 26
-      #define D_BTN 25
+      #define U_BTN -1
+      #define D_BTN -1
       #define C_BTN 33
 
       // #define HAS_L
