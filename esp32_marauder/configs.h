@@ -591,13 +591,13 @@
       #define L_BTN -1
       #define R_BTN -1
       #define U_BTN -1
-      #define D_BTN -1
-      #define C_BTN 34
+      #define D_BTN 26
+      #define C_BTN 25
 
       // #define HAS_L
       // #define HAS_R
       // #define HAS_U
-      // #define HAS_D
+      #define HAS_D
       #define HAS_C
 
       #define L_PULL true
