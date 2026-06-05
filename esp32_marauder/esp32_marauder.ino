@@ -51,19 +51,19 @@ https://www.online-utility.org/image/convert/to/XBM
 #ifdef HAS_BUTTONS
   #include "Switches.h"
   
-  #if (HAS_U)
+  #if HAS_U
     Switches u_btn = Switches(U_BTN, 1000, U_PULL);
   #endif
-  #if (HAS_D)
+  #if HAS_D
     Switches d_btn = Switches(D_BTN, 1000, D_PULL);
   #endif
-  #if (HAS_L)
+  #if HAS_L
     Switches l_btn = Switches(L_BTN, 1000, L_PULL);
   #endif
-  #if (HAS_R)
+  #if HAS_R
     Switches r_btn = Switches(R_BTN, 1000, R_PULL);
   #endif
-  #if (HAS_C)
+  #if HAS_C
     Switches c_btn = Switches(C_BTN, 1000, C_PULL);
   #endif
 
