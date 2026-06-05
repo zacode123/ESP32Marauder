@@ -167,7 +167,7 @@
     // #define HAS_NEOPIXEL_LED
     // #define HAS_PWR_MGMT
     #define HAS_SCREEN
-    #define HAS_MINI_SCREEN
+    #define HAS_FULL_SCREEN
     // #define HAS_SD
     // #define USE_SD
     // #define HAS_TEMP_SENSOR
@@ -588,23 +588,23 @@
     #endif
 
     #ifdef MARAUDER_MINI
-      #define L_BTN 13
-      #define C_BTN 33
+      // #define L_BTN 13
+      // #define R_BTN 27
       #define U_BTN 26
-      #define R_BTN 27
       #define D_BTN 25
+      #define C_BTN 33
 
-      #define HAS_L
-      #define HAS_R
+      // #define HAS_L
+      // #define HAS_R
       #define HAS_U
       #define HAS_D
       #define HAS_C
 
-      #define L_PULL true
-      #define C_PULL true
+      // #define L_PULL true
+      // #define R_PULL true
       #define U_PULL true
-      #define R_PULL true
       #define D_PULL true
+      #define C_PULL true
     #endif
 
     #ifdef MARAUDER_V7
@@ -1793,12 +1793,12 @@
       #define TFT_MISO 19
       #define TFT_MOSI 23
       #define TFT_SCLK 18
-      #define TFT_CS 27
-      #define TFT_DC 26
+      #define TFT_CS 17
+      #define TFT_DC 16
       #define TFT_RST 5
       #define TFT_BL 32
-      #define TOUCH_CS 21
-      #define SD_CS 4
+      #define TOUCH_CS -1
+      #define SD_CS -1
 
       #define SCREEN_BUFFER
 
@@ -1811,7 +1811,7 @@
       #endif
 
       #ifndef TFT_HEIGHT
-        #define TFT_HEIGHT 128
+        #define TFT_HEIGHT 160
       #endif
 
       #define GRAPH_VERT_LIM TFT_HEIGHT/2 - 1
