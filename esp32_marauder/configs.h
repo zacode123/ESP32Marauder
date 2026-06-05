@@ -597,8 +597,8 @@
       // #define HAS_L
       // #define HAS_R
       // #define HAS_U
-      #define HAS_D
-      #define HAS_C
+      // #define HAS_D
+      // #define HAS_C
 
       #define L_PULL true
       #define R_PULL true
