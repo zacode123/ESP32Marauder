@@ -16,7 +16,6 @@ Switches::Switches() {
 Switches::Switches(int pin, uint32_t hold_lim, bool pullup) {
 	this->pin = pin;
 	this->pullup = pullup;
-	this->pressed = false;
 	this->hold_lim = hold_lim;
 	this->cur_hold = 0;
 	this->isheld = false;
@@ -25,6 +24,9 @@ Switches::Switches(int pin, uint32_t hold_lim, bool pullup) {
   	pinMode(this->pin, INPUT_PULLUP);
   else
     pinMode(this->pin, INPUT_PULLDOWN);
+
+	this->pressed = this->getButtonState();
+	
 	
 	return;
 }
