@@ -88,7 +88,7 @@
 // driven with a PWM signal or turned OFF/ON then this must be handled by the user
 // sketch. e.g. with digitalWrite(TFT_BL, LOW);
 
- #define TFT_BACKLIGHT_ON LOW  // HIGH or LOW are options
+ #define TFT_BACKLIGHT_ON HIGH  // HIGH or LOW are options
 
 // ##################################################################################
 //
@@ -285,10 +285,10 @@
 // With an ILI9163 display 27 MHz works OK.
 
 // #define SPI_FREQUENCY   1000000
-//#define SPI_FREQUENCY   5000000
+// #define SPI_FREQUENCY   5000000
 // #define SPI_FREQUENCY  10000000
- #define SPI_FREQUENCY  20000000
-//#define SPI_FREQUENCY  27000000 // Marauder // Actually sets it to 26.67MHz = 80/3
+// #define SPI_FREQUENCY  20000000
+#define SPI_FREQUENCY  27000000 // Marauder // Actually sets it to 26.67MHz = 80/3
 // #define SPI_FREQUENCY  40000000
 // #define SPI_FREQUENCY  80000000
 
