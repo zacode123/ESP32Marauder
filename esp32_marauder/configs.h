@@ -600,8 +600,8 @@
       #define HAS_D
       #define HAS_C
 
-      #define L_PULL false
-      #define R_PULL false
+      #define L_PULL true
+      #define R_PULL true
       #define U_PULL true
       #define D_PULL true
       #define C_PULL true
