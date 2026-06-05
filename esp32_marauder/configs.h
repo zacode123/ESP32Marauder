@@ -592,12 +592,12 @@
       #define R_BTN -1
       #define U_BTN -1
       #define D_BTN -1
-      #define C_BTN 33
+      #define C_BTN -1
 
       // #define HAS_L
       // #define HAS_R
       // #define HAS_U
-      // #define HAS_D
+      #define HAS_D
       #define HAS_C
 
       #define L_PULL true
@@ -1796,7 +1796,7 @@
       #define TFT_CS 17
       #define TFT_DC 16
       #define TFT_RST 5
-      #define TFT_BL 32
+      #define TFT_BL 22
       #define TOUCH_CS -1
       #define SD_CS -1
 
