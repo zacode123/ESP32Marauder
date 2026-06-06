@@ -328,6 +328,7 @@ void setup()
 
   backlightOn(); // Need this
 
+  /*
   #ifdef HAS_SCREEN
     // Do some stealth mode stuff
     #ifdef HAS_BUTTONS
@@ -338,6 +339,7 @@ void setup()
       }
     #endif
   #endif
+  */
 
   settings_obj.begin();
 
