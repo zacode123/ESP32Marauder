@@ -55,46 +55,49 @@ bool Switches::getButtonState() {
 }
 
 bool Switches::justPressed() {
-	bool btn_state = this->getButtonState();
-	
-	// Button was JUST pressed
-	if (btn_state && !this->pressed) {
-		this->hold_init = millis();
-		this->pressed = btn_state;
-		return true;
-	}
-	else if (btn_state) { // Button is STILL pressed
-		// Check if button is held
-		//Serial.println("cur_hold: " + (String)this->cur_hold);
-		if ((millis() - this->hold_init) < this->hold_lim) {
-			this->isheld = false;
-		}
-		else {
-			this->isheld = true;
-		}
-		
-		this->pressed = btn_state;
-		return false;
-	}
-	else { // Button is not pressed
-		this->pressed = btn_state;
-		this->isheld = false;
-		return false;
-	}
+    bool btn_state = this->getButtonState();
+
+    if (btn_state && !this->pressed) {
+        if ((millis() - lastDebounceTime) < debounceDelay)
+            return false;
+
+        lastDebounceTime = millis();
+
+        this->hold_init = millis();
+        this->pressed = true;
+        return true;
+    }
+    else if (btn_state) {
+        if ((millis() - this->hold_init) < this->hold_lim)
+            this->isheld = false;
+        else
+            this->isheld = true;
+
+        this->pressed = true;
+        return false;
+    }
+    else {
+        this->pressed = false;
+        this->isheld = false;
+        return false;
+    }
 }
 
 bool Switches::justReleased() {
-	bool btn_state = this->getButtonState();
-	
-	// Button was JUST released
-	if (!btn_state && this->pressed) {
-		this->isheld = false;
-		this->pressed = btn_state;
-		return true;
-	}
-	else { // Button is STILL released
-		this->pressed = btn_state;
-		return false;
-	}
-	
+    bool btn_state = this->getButtonState();
+
+    if (!btn_state && this->pressed) {
+
+        if ((millis() - lastDebounceTime) < debounceDelay)
+            return false;
+
+        lastDebounceTime = millis();
+
+        this->isheld = false;
+        this->pressed = false;
+        return true;
+    }
+
+    this->pressed = btn_state;
+    return false;
 }
