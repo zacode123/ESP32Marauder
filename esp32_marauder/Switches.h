@@ -10,7 +10,7 @@ class Switches {
 		uint32_t cur_hold;
 
         uint32_t lastDebounceTime = 0;
-        uint32_t debounceDelay = 50;
+        uint32_t debounceDelay = 80;
 		
 		uint32_t hold_init = millis();
 		
