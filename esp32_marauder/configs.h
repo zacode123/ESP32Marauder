@@ -1796,7 +1796,7 @@
       #define TFT_CS 17
       #define TFT_DC 16
       #define TFT_RST 5
-      #define TFT_BL 22
+      #define TFT_BL 32
       #define TOUCH_CS -1
       #define SD_CS -1
 
