@@ -8,6 +8,9 @@ class Switches {
 		int pin;
 		uint32_t hold_lim;
 		uint32_t cur_hold;
+
+        uint32_t lastDebounceTime = 0;
+        uint32_t debounceDelay = 50;
 		
 		uint32_t hold_init = millis();
 		
